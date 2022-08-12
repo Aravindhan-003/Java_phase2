@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://JAVA.sun.com/xml/ns/javaee http://JAVA.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>ServletAndJSP</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>login.html</welcome-file>
+  </welcome-file-list>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>cookie</display-name>
+    <servlet-name>cookie</servlet-name>
+    <servlet-class>com.program.exercise.Cookiefirst</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cookie</servlet-name>
+    <url-pattern>/first</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>servlet2</display-name>
+    <servlet-name>servlet2</servlet-name>
+    <servlet-class>com.program.exercise.Servlet2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlet2</servlet-name>
+    <url-pattern>/serv2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>register</display-name>
+    <servlet-name>register</servlet-name>
+    <servlet-class>com.program.exercise.Servlet3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>register</servlet-name>
+    <url-pattern>/second</url-pattern>
+  </servlet-mapping>
+  <servlet>
+	   <servlet-name>show-me</servlet-name>
+	   <servlet-class>com.program.exercise.Servlet4</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	   <servlet-name>show-me</servlet-name>
+	   <url-pattern>/welcome</url-pattern>
+	</servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<context-param>
+    <param-name>a</param-name>
+    <param-value>10</param-value>
+  </context-param>
+  <context-param>
+    <param-name>b</param-name>
+    <param-value>20</param-value>
+  </context-param>
+  <context-param>
+    <param-name>c</param-name>
+    <param-value>30</param-value>
+  </context-param>
+  
+   <servlet>
+    <description></description>
+    <display-name>first</display-name>
+    <servlet-name>first</servlet-name>
+    <servlet-class>com.program.servlets.Servlet1</servlet-class>
+    <init-param>
+    <param-name>d</param-name>
+    <param-value>40</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>first</servlet-name>
+    <url-pattern>/servlet1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>second</display-name>
+    <servlet-name>second</servlet-name>
+    <servlet-class>com.program.servlets.Servlet2</servlet-class>
+    <init-param>
+    <param-name>d</param-name>
+    <param-value>80</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>second</servlet-name>
+    <url-pattern>/servlet2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>third</display-name>
+    <servlet-name>third</servlet-name>
+    <servlet-class>com.program.servlets.Servlet3</servlet-class>
+    <init-param>
+    <param-name>d</param-name>
+    <param-value>120</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>third</servlet-name>
+    <url-pattern>/servlet3</url-pattern>
+  </servlet-mapping>
+  
+  
+<servlet>
+<servlet-name>post</servlet-name>
+<servlet-class>com.program.servlets.Posthandler</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>post</servlet-name>
+<url-pattern>/index</url-pattern>
+</servlet-mapping>
+
+   <servlet>
+    <description></description>
+    <display-name>Home</display-name>
+    <servlet-name>Home</servlet-name>
+    <servlet-class>com.program.servlets.Homeservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Home</servlet-name>
+    <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>Valid</filter-name>
+    <filter-class>com.program.servlets.ValidFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Valid</filter-name>
+    <servlet-name>Home</servlet-name>
+  </filter-mapping>
+  <filter>
+    <filter-name>DataCheck</filter-name>
+    <filter-class>com.program.servlets.DataCheckFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>DataCheck</filter-name>
+    <servlet-name>Home</servlet-name>
+  </filter-mapping>
+  </web-app>
